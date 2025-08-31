@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Study Buddy – Flashcard Generator</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>AI Study Buddy</h1>
+    <p>Paste notes → Generate flashcards → Study smarter</p>
+  </header>
+
+  <main class="container grid">
+    <section class="panel">
+      <h2>Paste Your Notes</h2>
+      <textarea id="notes" rows="10" placeholder="Paste your study notes here..."></textarea>
+      <div class="row">
+        <label for="numCards">How many cards?</label>
+        <input id="numCards" type="number" min="1" max="10" value="5" />
+      </div>
+      <button id="generateBtn">Generate Flashcards</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Review & Save</h2>
+      <div id="cards" class="cards"></div>
+      <div class="actions">
+        <button id="saveBtn" disabled>Save to Library</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Your Library</h2>
+      <div id="library" class="library"></div>
+      <button id="refreshBtn">Refresh Library</button>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small>SDG 4: Quality Education • Built for Hackathon</small>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
